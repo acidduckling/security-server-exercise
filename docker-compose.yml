@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+  pg-server:
+    image: postgres:latest
+    build: .
+    ports:
+      - 5432:5432
+    environment: 
+      - POSTGRES_PASSWORD:password
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes: 
+      - pgdata:/var/lib/postgresql/data/pgdata
+      # The Postgres image has permissions issues if mounting to Windows host.
+      # try the following to keep the DB files in the dbdata folder of this workspace:
+      # - ./dbdata:/var/lib/postgresql/data/pgdata
+volumes: 
+  pgdata:
