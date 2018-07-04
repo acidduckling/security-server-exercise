@@ -23,3 +23,25 @@ docker exec -it pgdb /bin/bash
 ## NPM Logging Packages
 - Morgan (HTTP Requwest logger)
 - Winston
+
+## NPM Security Packages
+
+- dotenv (Access to environment variables in .env file)
+- helmet (Secure headers)
+- cSurf (NPM package to help prevent Cross-Site Request Forgery (CSRF) attacks)
+
+## Security related sites
+- https://www.owasp.org (Open Web Application Security Project - Security info on different platforms)
+- https://www.hacksplaining.com (interactive Security explanations!)
+- https://letsencrypt.org (Free  certificates)
+- http://httpbin.org (HTTP/S response service - docker image available)
+```bash
+# Run a local docker image of the HTTP/S response service:
+docker run -p 80:80 kennethreitz/httpbin
+```
+
+## Encryption Packages
+- BCrypt (bcrypt-nodejs)
+- Scrypt
+- Aragon2
+- pgcrypto (Encrypt a few columns for postgres)
